@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank Application Form</title>
+  </head>
+  <body>
+    <form action="https://httpbin.org/post" method="post">
+      <fieldset>
+        <legend>Account Opening Form</legend>
+        <br />
+        <label for="name">Full Name: <span style="color: red"> * </span></label>
+        <select name="fullname" required>
+          <option>Mr.</option>
+          <option>Miss.</option>
+          <option>Dr.</option>
+          <option>Mrs.</option>
+        </select>
+
+        <input
+          type="text"
+          id="name"
+          placeholder="First Name"
+          required
+          name="fname"
+          pattern="[a-z A-Z]{3,}"
+          title="first name shoould be more than 3 characters"
+        />
+        <input
+          type="text"
+          id="name"
+          placeholder="Last Name"
+          required
+          name="lname"
+          pattern="[a-zA-Z]{3,}"
+          title="last name shoould be more than 3 characters"
+        /><br /><br /><br />
+
+        <label for="Account"
+          >Account Type: <span style="color: red"> * </span></label
+        >
+        <select id="Account" required name="Account Type">
+          <option>Please Select</option>
+          <option>Savings Account</option>
+          <option>Current Account</option></select
+        ><br /><br /><br />
+
+        <label for="card" required>ID Card Number: </label>
+        <input
+          type="text"
+          placeholder="ex: 1234"
+          id="card"
+          name="card"
+          pattern="[0-9]{4,7}"
+        /><br /><br /><br />
+
+        <label for="mother"> Mother's Maiden Name: * </label>
+        <input
+          type="text"
+          id="mother"
+          requried
+          name="mother name"
+          pattern="[a-z A-Z]{3,}"
+        /><br /><br /><br />
+
+        <label for="salary"> Monthly Salary: * </label>
+        <input
+          type="text"
+          placeholder="USD"
+          id="salary"
+          required
+          name="salary"
+          pattern="[0-9]{3, }"
+        /><br /><br /><br />
+
+        <label for="gender" required name="Gender">Gender: * </label>
+        <input type="radio" id="gender" name="Gender" value="male" /><span
+          >Male</span
+        >
+        <input type="radio" id="gender" name="Gender" value="Female" /><span
+          >Female</span
+        >
+        <input type="radio" id="gender" name="Gender" value="others" /><span
+          >others</span
+        ><br /><br /><br />
+        <label for="date" required name="date f birth">Date of Birth * </label>
+        <select id="date" name="month">
+          <option>Month</option>
+          <option>06</option>
+        </select>
+        <select id="date" name="day">
+          <option>Day</option>
+          <option>23</option>
+        </select>
+
+        <select id="date" name="year">
+          <option>Year</option>
+          <option>2002</option>
+        </select>
+        <br /><br /><br />
+        <label for="marital" requried name="marital">Marital Status: * </label>
+        <input type="radio" id="marital" name="marital" value="single" /><span
+          >Single</span
+        >
+        <input type="radio" id="marital" name="marital" value="married" /><span
+          >Married</span
+        >
+        <input type="radio" id="marital" name="marital" value="divorced" /><span
+          >Divorced</span
+        >
+        <input type="radio" id="marital" name="marital" value="widow" /><span
+          >Widow</span
+        >
+
+        <br /><br /><br />
+
+        <label for="tel">Telephone Number * </label>
+        <input
+          type="text"
+          id="tel"
+          placeholder="Area Code"
+          required
+          name="Tel country code"
+          pattern="[0-9]{2}"
+        />
+        <input
+          type="text"
+          id="tel"
+          placeholder="Phone Number"
+          name="Telephone"
+          pattern="[0-9]{10}"
+          required
+        /><br /><br /><br />
+        <label for="email">Email: * </label>
+        <input
+          type="email"
+          required
+          name="email"
+          id="email"
+          placeholder="Enter your email !"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}"
+          title="Please enter the correct gamil !"
+        />
+
+        <br /><br /><br />
+
+        <label for="address"><span>Address * </span></label>
+        <textarea
+          name="address"
+          rows="10"
+          cols="60"
+          required
+          pattern="[a-z A-Z 0-9]{0,150}"
+        ></textarea>
+        <br /><br /><br />
+        <label for="password">password: * </label>
+        <input
+          type="password"
+          required
+          id="password"
+          name="password"
+          pattern="[a-zA-Z0-9]{10,15}"
+        />
+        <hr />
+        <input type="submit" />
+        <button>cancel</button>
+      </fieldset>
+    </form>
+  </body>
+</html>
